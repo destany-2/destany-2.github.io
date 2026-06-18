@@ -8,3 +8,97 @@ body {
 h1 {
     color: navy;
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Hero */
+
+#hero {
+    height: 100vh;
+    background-image: url("images/lofi-room.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    background: rgba(0,0,0,.3);
+}
+
+.overlay h1 {
+    font-size: 4rem;
+}
+
+.overlay p {
+    margin-top: 10px;
+}
+
+.arrow {
+    margin-top: 20px;
+    font-size: 2rem;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+/* Content */
+
+#content {
+    min-height: 100vh;
+    padding: 100px;
+    background: #111;
+    color: white;
+}
+
+/* iPod */
+
+#ipod {
+    position: fixed;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 220px;
+    background: white;
+    border-radius: 25px;
+
+    padding: 20px;
+
+    box-shadow: 0 0 20px rgba(0,0,0,.2);
+}
+
+.screen {
+    background: #d7f0d7;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+#play-btn {
+    width: 100%;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+}
