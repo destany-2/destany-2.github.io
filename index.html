@@ -1,59 +1,419 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>My Website</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<h1>Hello, I'm Alex</h1>
-<h1>About Me</h1>
-<p>I am a software engineer.</p>
-<p>Welcome to my website.</p>
-
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lofi Landing Page</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Destany Pearl - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="logo">✿ DP</a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-active">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="about.html">About Me</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section id="hero">
-        <div class="overlay">
-            <h1>Welcome</h1>
-            <p>Scroll to Enter</p>
-            <div class="arrow">↓</div>
+    <main>
+        <!-- Hero: First-person desk scene — you're sitting at this desk -->
+        <section class="desk-scene" id="hero">
+            <!-- Wall (top half — what you see above the desk) -->
+            <div class="wall">
+                <!-- Corkboard on wall, right side, cut off by viewport edge -->
+                <div class="corkboard">
+                    <div class="cork-pin pin-1"></div>
+                    <div class="cork-pin pin-2"></div>
+                    <div class="cork-note note-1">Goals 2026 ✿</div>
+                    <div class="cork-photo photo-1"></div>
+                    <div class="cork-photo photo-2"></div>
+                </div>
+            </div>
+
+            <!-- Desk surface (bottom half — stretches full width) -->
+            <div class="desk-surface">
+                <!-- Items on the desk, left to right -->
+
+                <!-- LAPTOP — left side, open, angled slightly toward you -->
+                <div class="laptop">
+                    <div class="laptop-lid">
+                        <div class="laptop-screen">
+                            <div class="laptop-screen-content">
+                                <p class="laptop-greeting">Hi, I'm</p>
+                                <h1 class="laptop-name">Destany Pearl</h1>
+                                <p class="laptop-title">Software Engineering Student</p>
+                                <p class="laptop-desc">DNIMAS Scholar · Norfolk State University</p>
+                                <a href="projects.html" class="laptop-btn">View My Work →</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="laptop-keyboard"></div>
+                </div>
+
+                <!-- VASE — center, white pitcher with pink peonies -->
+                <div class="vase-group">
+                    <div class="vase-flowers">
+                        <div class="stem"></div>
+                        <div class="stem s2"></div>
+                        <div class="stem s3"></div>
+                        <div class="bloom b1"></div>
+                        <div class="bloom b2"></div>
+                        <div class="bloom b3"></div>
+                        <div class="bloom b4"></div>
+                        <div class="leaf lf1"></div>
+                        <div class="leaf lf2"></div>
+                    </div>
+                    <div class="vase-pitcher"></div>
+                </div>
+
+                <!-- iPOD + EARBUDS — right side -->
+                <div class="ipod-group">
+                    <div class="earbuds" id="earbuds">
+                        <svg class="earbuds-svg" viewBox="0 0 140 90" xmlns="http://www.w3.org/2000/svg">
+                            <path class="earbud-cord cord-main" d="M 70,85 C 68,70 62,58 56,48 C 50,38 46,30 50,22" fill="none" stroke="#7b68ae" stroke-width="2" stroke-linecap="round" stroke-dasharray="3,2"/>
+                            <path class="earbud-cord cord-left" d="M 50,22 C 40,16 28,14 18,18 C 12,21 10,27 13,31" fill="none" stroke="#7b68ae" stroke-width="2" stroke-linecap="round" stroke-dasharray="3,2"/>
+                            <path class="earbud-cord cord-right" d="M 50,22 C 62,16 80,12 100,14 C 112,16 120,22 118,28" fill="none" stroke="#7b68ae" stroke-width="2" stroke-linecap="round" stroke-dasharray="3,2"/>
+                            <ellipse cx="12" cy="30" rx="5" ry="4" fill="#6cc8c4"/>
+                            <ellipse cx="12" cy="30" rx="3" ry="2.5" fill="#9ce0dc"/>
+                            <ellipse cx="119" cy="27" rx="5" ry="4" fill="#6cc8c4"/>
+                            <ellipse cx="119" cy="27" rx="3" ry="2.5" fill="#9ce0dc"/>
+                            <rect x="67" y="82" width="6" height="8" rx="2" fill="#888"/>
+                        </svg>
+                    </div>
+                    <div class="ipod-flat" id="hero-ipod">
+                        <div class="ipod-flat-screen">
+                            <div class="ipod-now-playing">
+                                <p class="ipod-now-playing-label">Now Playing</p>
+                                <div class="ipod-track-info">
+                                    <div class="ipod-album-art">♪</div>
+                                    <div class="ipod-track-details">
+                                        <p class="ipod-song-title">Lo-Fi Vibes</p>
+                                        <p class="ipod-artist">Press play</p>
+                                        <p class="ipod-track-number">1 of 8</p>
+                                    </div>
+                                </div>
+                                <div class="ipod-progress-row">
+                                    <span class="ipod-time-current">0:00</span>
+                                    <div class="ipod-progress">
+                                        <div class="ipod-progress-bar"></div>
+                                    </div>
+                                    <span class="ipod-time-remaining">-0:00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ipod-flat-wheel">
+                            <div class="ipod-wheel-inner">
+                                <button class="ipod-play-btn" id="hero-play-btn" aria-label="Play or pause music">▶</button>
+                            </div>
+                            <span class="ipod-wheel-label top">MENU</span>
+                            <button class="ipod-wheel-label right ipod-nav-btn" id="skip-btn" aria-label="Skip to next track">»</button>
+                            <span class="ipod-wheel-label bottom">⏸</span>
+                            <button class="ipod-wheel-label left ipod-nav-btn" id="prev-btn" aria-label="Previous track">«</button>
+                        </div>
+                        <div class="ipod-flat-dock"></div>
+                    </div>
+                    <div class="ipod-hint" id="ipod-hint">
+                        <span class="ipod-hint-text">♪ click to play</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Timeline -->
+        <section class="education-timeline" id="education">
+            <div class="container">
+                <h2 class="section-title" style="color: #fff;">My Journey</h2>
+                <div class="timeline-horizontal">
+                    <div class="timeline-line"></div>
+                    
+                    <div class="tl-item tl-above" style="left: 5%;">
+                        <div class="tl-hex">
+                            <img src="https://destany-2.github.io/Images/GrassfieldHighschool.jpeg" alt="Grassfield High School">
+                        </div>
+                        <div class="tl-connector"></div>
+                        <div class="tl-dot"></div>
+                        <div class="tl-label">Started<br>Grassfield HS</div>
+                    </div>
+
+                    <div class="tl-item tl-below" style="left: 18%;">
+                        <div class="tl-dot"></div>
+                        <div class="tl-connector"></div>
+                        <div class="tl-hex">
+                            <img src="https://destany-2.github.io/Images/PH.jpg" alt="Chesapeake Career Center">
+                        </div>
+                        <div class="tl-label">DE Classes<br>Career Center</div>
+                    </div>
+
+                    <div class="tl-item tl-above" style="left: 31%;">
+                        <div class="tl-hex">
+                            <img src="https://destany-2.github.io/Images/CompTIALogo.jpeg" alt="CompTIA ITF+">
+                        </div>
+                        <div class="tl-connector"></div>
+                        <div class="tl-dot"></div>
+                        <div class="tl-label">CompTIA<br>ITF+</div>
+                    </div>
+
+                    <div class="tl-item tl-below" style="left: 44%;">
+                        <div class="tl-dot"></div>
+                        <div class="tl-connector"></div>
+                        <div class="tl-hex">
+                            <img src="https://destany-2.github.io/Images/CompTIALogo.jpeg" alt="CompTIA Network+">
+                        </div>
+                        <div class="tl-label">CompTIA<br>Network+</div>
+                    </div>
+
+                    <div class="tl-item tl-above" style="left: 57%;">
+                        <div class="tl-hex">
+                            <img src="https://destany-2.github.io/Images/GrassfieldHighschool.jpeg" alt="IT Help Desk Intern">
+                        </div>
+                        <div class="tl-connector"></div>
+                        <div class="tl-dot"></div>
+                        <div class="tl-label">IT Help Desk<br>Intern</div>
+                    </div>
+
+                    <div class="tl-item tl-below" style="left: 70%;">
+                        <div class="tl-dot"></div>
+                        <div class="tl-connector"></div>
+                        <div class="tl-hex">
+                            <img src="https://destany-2.github.io/Images/GrassfieldHighschool.jpeg" alt="Graduated Grassfield">
+                        </div>
+                        <div class="tl-label">Graduated<br>Grassfield</div>
+                    </div>
+
+                    <div class="tl-item tl-above" style="left: 83%;">
+                        <div class="tl-hex">
+                            <img src="https://destany-2.github.io/Images/PH.jpg" alt="Amazon Internship">
+                        </div>
+                        <div class="tl-connector"></div>
+                        <div class="tl-dot"></div>
+                        <div class="tl-label">Amazon<br>Intern</div>
+                    </div>
+
+                    <div class="tl-item tl-below" style="left: 95%;">
+                        <div class="tl-dot"></div>
+                        <div class="tl-connector"></div>
+                        <div class="tl-hex">
+                            <img src="https://destany-2.github.io/Images/NSULogo.jpeg" alt="Norfolk State University">
+                        </div>
+                        <div class="tl-label">Norfolk State<br>University</div>
+                    </div>
+
+                    <div class="tl-year" style="left: 5%;">2021</div>
+                    <div class="tl-year" style="left: 18%;">2023</div>
+                    <div class="tl-year" style="left: 31%;">2024</div>
+                    <div class="tl-year" style="left: 44%;">2025</div>
+                    <div class="tl-year" style="left: 57%;">2025</div>
+                    <div class="tl-year" style="left: 70%;">2025</div>
+                    <div class="tl-year" style="left: 83%;">2025</div>
+                    <div class="tl-year" style="left: 95%;">2025</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Internships -->
+        <section class="internships" id="internships">
+            <div class="container">
+                <h2 class="section-title">Experience</h2>
+                <div class="internships-grid">
+                    <div class="internship-card">
+                        <div class="internship-header">
+                            <div class="internship-icon">🚀</div>
+                            <div>
+                                <h3>Software Development Engineer Intern</h3>
+                                <p class="internship-company">Amazon · Internship</p>
+                            </div>
+                        </div>
+                        <p class="internship-date">May 2025 – Aug 2025 · 12 wks</p>
+                        <p class="internship-location">📍 [Placeholder], United States · On-site</p>
+                        <ul class="internship-duties">
+                            <li>[Placeholder — description of responsibilities]</li>
+                            <li>[Placeholder — technologies and tools used]</li>
+                            <li>[Placeholder — impact or projects contributed to]</li>
+                        </ul>
+                        <div class="internship-skills">
+                            <span>[Placeholder]</span>
+                            <span>Software Development</span>
+                        </div>
+                    </div>
+
+                    <div class="internship-card">
+                        <div class="internship-header">
+                            <div class="internship-icon">💻</div>
+                            <div>
+                                <h3>IT Help Desk Intern</h3>
+                                <p class="internship-company">Grassfield High School · Internship</p>
+                            </div>
+                        </div>
+                        <p class="internship-date">Feb 2025 – Jun 2025 · 5 mos</p>
+                        <p class="internship-location">📍 Chesapeake, Virginia, United States · On-site</p>
+                        <ul class="internship-duties">
+                            <li>Troubleshoot common issues with student and teacher Chromebooks</li>
+                            <li>Manage the distribution of tech assets</li>
+                        </ul>
+                        <div class="internship-skills">
+                            <span>Communication</span>
+                            <span>Customer Service</span>
+                            <span>Troubleshooting</span>
+                            <span>IT Support</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications -->
+        <section class="skills" id="skills">
+            <div class="container">
+                <h2 class="section-title">Certifications</h2>
+                <div class="certs-grid">
+                    <div class="cert-card">
+                        <div class="cert-image">
+                            <img src="https://destany-2.github.io/Images/Network+Cert.jpeg" alt="CompTIA Network+ Certificate">
+                        </div>
+                        <div class="cert-info">
+                            <h3>CompTIA Network+ ce</h3>
+                            <p class="cert-issuer">CompTIA</p>
+                            <p class="cert-date">Issued May 2025 · Expires May 2028</p>
+                            <p class="cert-id">Credential ID: NQRJZLQ5WJV1K7Y2</p>
+                            <a href="https://www.credly.com/badges/8845b090-78a0-4d2e-b917-f42e096a86b7/linked_in_profile" target="_blank" rel="noopener noreferrer" class="cert-link">See Credential →</a>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-image">
+                            <img src="https://destany-2.github.io/Images/ITF%2BCert.jpeg" alt="CompTIA ITF+ Certificate">
+                        </div>
+                        <div class="cert-info">
+                            <h3>CompTIA IT Fundamentals (ITF+)</h3>
+                            <p class="cert-issuer">CompTIA</p>
+                            <p class="cert-date">Issued Mar 2024</p>
+                            <p class="cert-id">Credential ID: Z30S7T1Q9ERE586J</p>
+                            <a href="https://www.credly.com/badges/d3c45f9d-a57a-471a-9d83-fdfd36a08b02/public_url" target="_blank" rel="noopener noreferrer" class="cert-link">See Credential →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="skills-section" id="more-skills">
+            <div class="container">
+                <h2 class="section-title">Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Languages</h3>
+                        <ul>
+                            <li>Python</li>
+                            <li>C++</li>
+                            <li>JavaScript</li>
+                            <li>HTML &amp; CSS</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Tools &amp; Frameworks</h3>
+                        <ul>
+                            <li>Raylib</li>
+                            <li>Git &amp; GitHub</li>
+                            <li>VS Code</li>
+                            <li>Microsoft Office</li>
+                            <li>Linux</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Cybersecurity</h3>
+                        <ul>
+                            <li>Network Security</li>
+                            <li>Risk Management</li>
+                            <li>Ethical Hacking</li>
+                            <li>CompTIA Network+</li>
+                            <li>CompTIA ITF+</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interests -->
+        <section class="interests-section" id="interests">
+            <div class="container">
+                <h2 class="section-title">Interests</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>What I Love</h3>
+                        <ul>
+                            <li>Software Development</li>
+                            <li>Cybersecurity</li>
+                            <li>Game Development</li>
+                            <li>Web Design</li>
+                            <li>Interactive Storytelling</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section class="education-section" id="edu">
+            <div class="container">
+                <h2 class="section-title">Education</h2>
+                <div class="edu-grid">
+                    <div class="edu-card">
+                        <p class="edu-degree">🎓 Norfolk State University</p>
+                        <p class="edu-detail">B.S. Computer Software Engineering · 2025 – 2029</p>
+                        <p class="edu-detail">DNIMAS Scholar · NSBE · IEEE · Cyber Club</p>
+                    </div>
+                    <div class="edu-card">
+                        <p class="edu-degree">🎓 Chesapeake Career Center / TCC</p>
+                        <p class="edu-detail">Career Studies Certificate, Cybersecurity · 2023 – 2025</p>
+                        <p class="edu-detail">4.0 GPA · National Technical Honor Society</p>
+                    </div>
+                    <div class="edu-card">
+                        <p class="edu-degree">🎓 Grassfield High School</p>
+                        <p class="edu-detail">High School Diploma · 2021 – 2025</p>
+                        <p class="edu-detail">President, National Society of Engineers Club · NHS</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="https://github.com/destany-2" aria-label="GitHub profile" target="_blank" rel="noopener noreferrer">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle; margin-right: 4px;"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                    GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/destany-pearl-472b57375" aria-label="LinkedIn profile" target="_blank" rel="noopener noreferrer">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle; margin-right: 4px;"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    LinkedIn
+                </a>
+                <a href="mailto:destanympearl@gmail.com" aria-label="Email">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle; margin-right: 4px;"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    Email
+                </a>
+            </div>
+            <p class="footer-copy">&copy; 2026 Destany Pearl. All rights reserved.</p>
         </div>
-    </section>
+    </footer>
 
-    <!-- Main Content -->
-    <section id="content">
-        <h2>Main Website</h2>
-        <p>Your actual website starts here.</p>
-    </section>
-
-    <!-- iPod Music Player -->
-    <div id="ipod">
-        <div class="screen">
-            <h3>Now Playing</h3>
-            <p id="song-title">Lofi Mix</p>
-        </div>
-
-        <button id="play-btn">▶</button>
-
-        <audio id="audio">
-            <source src="music/lofi.mp3" type="audio/mpeg">
-        </audio>
+    <!-- Dancing cat (appears when music plays) -->
+    <div class="dancing-cat" id="dancing-cat">
+        <img
+            src="https://media.tenor.com/uGc4wAPKr_0AAAAj/heart.gif"
+            alt="Floating hearts"
+            class="dancing-cat-hearts"
+        >
+        <img
+            src="https://media.tenor.com/Doz_0PR3GQkAAAAj/cat-cats.gif"
+            alt="Cute dancing cat"
+            class="dancing-cat-gif"
+        >
     </div>
 
-
-</body>
-</html>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
